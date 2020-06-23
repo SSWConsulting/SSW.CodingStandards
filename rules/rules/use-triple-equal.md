@@ -1,6 +1,6 @@
 ---
 id: 'ssw9'
-name: 'User triple equals instead of double'
+title: 'User triple equals instead of double'
 ruleUrl: 'https://eslint.org/docs/rules/eqeqeq'
 ruleType: Script
 fileFilter: '*.js;*.ts'

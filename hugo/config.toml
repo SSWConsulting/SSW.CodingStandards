@@ -1,0 +1,6 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "SSW Coding Standards"
+theme = "hugo-notepadium"
+contentDir = "../rules"
+publishDir = "../public"

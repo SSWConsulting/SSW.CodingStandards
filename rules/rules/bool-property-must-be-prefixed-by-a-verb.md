@@ -1,6 +1,6 @@
 ---
 id: 'ssw26'
-name: 'Boolean Properties must be prefixed by a verb'
+title: 'Boolean Properties must be prefixed by a verb'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Regex
 fileFilter: '*.cs'

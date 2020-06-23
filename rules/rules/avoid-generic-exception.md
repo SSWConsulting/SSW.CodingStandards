@@ -1,6 +1,8 @@
 ---
+date: 2019-03-26T08:47:11+01:00
+draft: false
 id: 'ssw88'
-name: 'Avoid generic Exceptions'
+title: 'Avoid generic Exceptions'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Regex
 fileFilter: '*.cs'

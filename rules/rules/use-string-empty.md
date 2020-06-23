@@ -1,6 +1,6 @@
 ---
 id: 'ssw26'
-name: 'Use String.Empty instead of ""'
+title: 'Use String.Empty instead of ""'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Regex
 fileFilter: '*.cs;*.js'

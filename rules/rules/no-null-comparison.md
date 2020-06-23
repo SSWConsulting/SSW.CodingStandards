@@ -1,6 +1,6 @@
 ---
 id: 'ssw88'
-name: 'Disallow Null Comparisons (no-eq-null)'
+title: 'Disallow Null Comparisons (no-eq-null)'
 ruleUrl: 'https://eslint.org/docs/rules/no-eq-null'
 ruleType: Script
 fileFilter: '*.js;*.ts'

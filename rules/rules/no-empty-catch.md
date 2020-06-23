@@ -1,6 +1,6 @@
 ---
 id: 'ssw26'
-name: 'No empty catch blocks'
+title: 'No empty catch blocks'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Regex
 fileFilter: '*.cs;*.js'
