@@ -8,7 +8,9 @@
 	},
 	"scripts": {
 		"test": "node .",
-		"build": "cd hugo && hugo -D"
+		"predeploy": "cd hugo && hugo --minify",
+		"deploy": "firebase deploy --token $FIREBASETOKEN --only hosting",
+		"login:ci": "firebase login:ci"
 	},
 	"repository": {
 		"type": "git",
@@ -33,5 +35,8 @@
 		"typescript": "^3.9.3",
 		"vm2": "^3.9.2",
 		"yargs": "^15.3.1"
+	},
+	"devDependencies": {
+		"firebase-tools": "^8.4.3"
 	}
 }
