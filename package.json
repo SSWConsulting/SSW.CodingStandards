@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"test": "node .",
-		"predeploy": "cd hugo && hugo --minify",
+		"build": "cd hugo && hugo --minify",
 		"deploy": "firebase deploy --token $FIREBASETOKEN --only hosting",
 		"login:ci": "firebase login:ci"
 	},
