@@ -24,14 +24,14 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.72.0"
-          
+
+      - name: build
+        run: cd hugo && hugo --minify          
+
       - name: Run a multi-line script
         env:
           FIREBASETOKEN: ${{ secrets.FIREBASETOKEN }}
         run: |
-          cd hugo
-          hugo --minify
-          cd ..
           ls public
           npm install
           npm run deploy
