@@ -1,6 +1,6 @@
 # Run CodeAuditor 
 
-Run Code Audit on your project. This project was created based on https://rules.ssw.com.au/
+Run Static Code Analysis on your project
 
 ```bash
 $ npm install -g sswcodeauditor
@@ -8,4 +8,4 @@ $ cd MyProject
 $ sswcodeauditor
 ```
 
-Add new rule by submitting pull request at https://github.com/nvhoanganh/urlchecker
+Add new rule by submitting pull request at https://github.com/SSWConsulting/SSW.CodingStandards
