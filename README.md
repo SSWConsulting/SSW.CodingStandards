@@ -1,4 +1,4 @@
-# Run SSWCodeAuditor 
+# Run CodeAuditor 
 
 Run Code Audit on your project. This project was created based on https://rules.ssw.com.au/
 
