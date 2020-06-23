@@ -1,6 +1,6 @@
 ---
 id: 'ssw89'
-title: 'The <title>, <h1>, and <h2> tags need to be descriptive'
+title: 'The title, h1, and h2 tags need to be descriptive'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Script
 fileFilter: '*.html;*.htm;*.aspx;*.asp'
