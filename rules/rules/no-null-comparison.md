@@ -27,34 +27,28 @@ script: |
     module.exports = errors;
 ---
 
-## Rule Details
+## Disallow Null Comparisons (no-eq-null)
 
-For SEO, make sure your title, description, h1 and h2 must be descriptive (at least 3 words)
+Comparing to `null` without a type-checking operator (`==` or `!=`), can have unintended results as the comparison will evaluate to true when comparing to not just a `null`, but also an `undefined` value.
 
-Examples of **incorrect** code for this rule:
+```javascript
+if (foo == null) {
+  bar();
+}
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My App</title>
-	</head>
-	<body></body>
-</html>
+while (qux != null) {
+  baz();
+}
 ```
 
 Examples of **correct** code for this rule:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My really cool website which scan websites</title>
-	</head>
-	<body></body>
-</html>
+```javascript
+if (foo === null) {
+  bar();
+}
+
+while (qux !== null) {
+  baz();
+}
 ```

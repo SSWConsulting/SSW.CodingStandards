@@ -1,6 +1,6 @@
 ---
 id: 'ssw89'
-title: 'The title, h1, and h2 tags need to be descriptive'
+title: 'The title tags need to be descriptive'
 ruleUrl: 'http://www.ssw.com.au/ssw/CodeAuditor/'
 ruleType: Script
 fileFilter: '*.html;*.htm;*.aspx;*.asp'
@@ -23,7 +23,7 @@ script: |
         }
     }
 
-    let errors = Array.from($('h2,h1,title,description'))
+    let errors = Array.from($('title,description'))
         .map((x) => {
             const text = getText(x);
             if (text.split(' ').length <= 3) {
@@ -35,9 +35,9 @@ script: |
     module.exports = errors;
 ---
 
-## Rule Details
+## The title and description tags need to be descriptive
 
-For SEO, make sure your title, description, h1 and h2 must be descriptive (at least 3 words)
+For SEO, make sure your `title` and `description` tag must be descriptive (at least 3 words)
 
 Examples of **incorrect** code for this rule:
 

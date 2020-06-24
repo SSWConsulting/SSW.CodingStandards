@@ -1,6 +1,6 @@
 ---
 id: 'ssw9'
-title: 'User triple equals instead of double'
+title: 'Use triple equals instead of double equals'
 ruleUrl: 'https://eslint.org/docs/rules/eqeqeq'
 ruleType: Script
 fileFilter: '*.js;*.ts'
@@ -23,34 +23,34 @@ script: |
     module.exports = errors;
 ---
 
-## Rule Details
+## Use triple equals instead of double equalsv
 
-For SEO, make sure your title, description, h1 and h2 must be descriptive (at least 3 words)
+This rule is aimed at eliminating the type-unsafe equality operators.
 
 Examples of **incorrect** code for this rule:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My App</title>
-	</head>
-	<body></body>
-</html>
+```javascript
+a == b
+foo == true
+bananas != 1
+value == undefined
+typeof foo == 'undefined'
+'hello' != 'world'
+0 == 0
+true == true
+foo == null
 ```
 
 Examples of **correct** code for this rule:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My really cool website which scan websites</title>
-	</head>
-	<body></body>
-</html>
+```javascript
+a === b
+foo === true
+bananas !== 1
+value === undefined
+typeof foo === 'undefined'
+'hello' !== 'world'
+0 === 0
+true === true
+foo === null
 ```
