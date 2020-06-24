@@ -117,6 +117,12 @@ const args = yargs
 		type: 'string',
 		demandOption: false,
 	})
+	.option('rules', {
+		alias: 'R',
+		describe: 'folder containing the rules to check',
+		type: 'string',
+		demandOption: false,
+	})
 	.option('json', {
 		alias: 'json',
 		describe: 'print output in JSON format',
@@ -153,18 +159,14 @@ if (ignoreF) {
 }
 
 let allRules = [];
+const ruleFolder = args.rules || path.join(__dirname, '../rules/rules/');
 
-log(
-	chalk.blueBright(
-		`Checking rules in folder ${path.join(__dirname, '../rules/')}`
-	)
-);
-const rules = fs.readdirSync(path.join(__dirname, '../rules/'));
+log(chalk.blueBright(`Checking rules in folder ${ruleFolder}`));
+
+const rules = fs.readdirSync(ruleFolder);
 for (let index = 0; index < rules.length; index++) {
 	const rule = rules[index];
-	const ruleMd = fs
-		.readFileSync(path.join(__dirname, `../rules/${rule}`))
-		.toString();
+	const ruleMd = fs.readFileSync(`${ruleFolder}${rule}`).toString();
 	const parsed = parser.parseSync(ruleMd).data;
 	allRules.push({ ...parsed, ruleFile: rule });
 }
